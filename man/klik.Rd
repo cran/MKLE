@@ -1,36 +1,42 @@
-\name{Klik}
+\name{klik}
 \alias{klik}
 \title{ Kernel log likelihood }
 \description{
-  The function computes the kernel log likelihood for a given theta
+  The function computes the kernel log likelihood for a given $\theta$.
 }
 \usage{
-klik(theta = 0, data, Kernel = dnorm, bw = 2*sd(data))
+klik(delta , data, kde, grid, min)
 }
+%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{theta}{ the parameter value for which the log likelihood will be computed. }
-  \item{data}{ the data for which the log likelihood will be computed. }
-  \item{Kernel}{ a R function to be used as the kernel function. }
-  \item{bw}{ the smoothing bandwidth to be used. }
+  \item{delta}{ the difference of the parameter $\theta$ for which the kernel log likelihood will be computed and the sample mean. }
+  \item{data}{ the data for which the kernel log likelihood will be computed. }
+  \item{kde}{ an object of the class "density". }
+  \item{grid}{ the stepsize between the x-values in kde. }
+  \item{min}{ the smallest x-value in kde. }
 }
 \details{
-  The log likelihood of theta for a given bandwidth. 
+  This function is intended to be called through the function \code{\link{mkle}} and is optimized for fast computation.
 }
 \value{
   The log likelihood based on the shifted kernel density estimator.
 }
-\references{ ~in preperation~ }
+\references{ Jaki T., West R. W. (2007) Maximum kernel likelihood estimation. Submitted to \textit{Journal of Computational
+and Graphical Statistics}. }
 \author{ Thomas Jaki }
-\seealso{ \code{\link{Kdensity}} and \code{\link{mkle}}  }
+\seealso{ \code{\link{mkle}} }
 \examples{
-
-## plots the kernel log likelihood
 data(state)
 attach(state)
-tv<-seq(min(crime),max(crime))
+bw<-2*sd(CRIME)
+kdensity<-density(CRIME,bw=bw,kernel="biweight",
+          from=min(CRIME)-2*bw,to=max(CRIME)+2*bw,n=2^12)
+min<-kdensity$x[1]
+grid<-kdensity$x[2]-min
 
-lik<-sapply(tv,klik,data=crime)	
-plot(tv,lik,type='l',xlab='theta',ylab='Kernel Likelihood')
-abline(v=mean(crime),col='red')
+# finds the kernel log likelihood at the sample mean
+klik(0,CRIME, kdensity, grid, min)
+
 }
-\keyword{univar}
+\keyword{ distribution }
+\keyword{ nonparametric }
