@@ -10,7 +10,7 @@
     bootdata<-matrix(sample(data,length(data)*B,replace=TRUE),ncol=B)
     jackmkles<-matrix(NA,ncol=n,nrow=B)
     for(i in 0:(n-1)){
-      jackdata<-apply(bootdata,2,subset,c(rep(T,i),F,rep(T,n-i-1)))[1:(n-1),]
+      jackdata<-apply(bootdata,2,subset,c(rep(TRUE,i),FALSE,rep(TRUE,n-i-1)))[1:(n-1),]
       jackmkles[,i+1]<-apply(jackdata,2,mkle,bw=bw,gridsize=gridsize,kernel=kernel)
     }
     sestars<-sqrt(apply(jackmkles,1,var)*(n-1)^2/n)

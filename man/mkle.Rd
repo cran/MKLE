@@ -15,18 +15,18 @@ mkle(data,bw=2*sd(data),kernel=c("gaussian", "epanechnikov", "rectangular", "tri
   \item{kernel}{  a character string giving the smoothing kernel to be used. This must be one of '"gaussian"', 
                   '"rectangular"', '"triangular"', '"epanechnikov"', '"biweight"', '"cosine"' or '"optcosine"', 
                   with default '"gaussian"'. May be abbreviated to a unique prefix (single letter).}
-  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with $2^{14}$ as the default. }
+  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with \eqn{2^{14}} as the default. }
 }
 \details{
-  The default for the bandwidth is $2*s$, which is the near-optimal value if a Gaussian kernel is used. If the bandwidth is zero, the sample mean will be returned.
+  The default for the bandwidth is \eqn{2s}, which is the near-optimal value if a Gaussian kernel is used. If the bandwidth is zero, the sample mean will be returned.
 
-  Larger gridsize results in more acurate estimates but also longer computation times. The use of gridsizes between $2^{11}$ and $2^{20}$ is recommended.
+  Larger gridsize results in more acurate estimates but also longer computation times. The use of gridsizes between \eqn{2^{11}} and \eqn{2^{20}} is recommended.
 }
 
 \value{
   The maximum kernel likelihood estimator.
 }
-\references{ Jaki T., West R. W. (2007) Maximum kernel likelihood estimation. Submitted to \textit{Journal of Computational and Graphical Statistics}. }
+\references{ Jaki T., West R. W. (2008) Maximum kernel likelihood estimation. \emph{Journal of Computational and Graphical Statistics} Vol. 17(No 4), 976-993. }
 \author{ Thomas Jaki }
 \note{\code{\link{optimize}} is used for the optimization and \code{\link{density}} is used to estimate the kernel density.
 }

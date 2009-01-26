@@ -11,7 +11,7 @@ opt.bw(data, bws=c(sd(data),4*sd(data)), B=1000, gridsize=2^14)
   \item{data}{ the data for which the optimal bandwidth should be found. }
   \item{bws}{ a vector with the upper and lower bound for the bandwidth. }
   \item{B}{ number of resamples used to estimate the mean squared error with 1000 as the default.}
-  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with $2^{14}$ as the default.}
+  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with \eqn{2^{14}} as the default.}
 }
 \details{
   The bandwidth considered fall between one and 4 standard deviations. In addition the mse of the \code{\link{mkle}} for a bandwidth of zero will also be included. 
@@ -23,7 +23,7 @@ opt.bw(data, bws=c(sd(data),4*sd(data)), B=1000, gridsize=2^14)
   The estimated optimal bandwidth.
 }
 \references{ 
-Jaki T., West R. W. (2007) Maximum kernel likelihood estimation. Submitted to \textit{Journal of Computational and Graphical Statistics}. 
+Jaki T., West R. W. (2008) Maximum kernel likelihood estimation. Submitted to \emph{Journal of Computational and Graphical Statistics} Vol. 17(No 4), 976-993. 
 
 Davison, A. C. and Hinkley, D. V. (1997), Bootstrap Methods and their Applications, Cambridge Series in Statistical and Probabilistic Mathematics, Cambridge University Press.
 }

@@ -17,7 +17,7 @@ mkle.ci(data, bw=2*sd(data), alpha=0.1, kernel=c("gaussian", "epanechnikov",
   \item{kernel}{ a character string giving the smoothing kernel to be used. This must be one of '"gaussian"', '"rectangular"', '"triangular"', '"epanechnikov"', '"biweight"', '"cosine"' or '"optcosine"', with default '"gaussian"', and may be abbreviated to a unique prefix (single letter).}
   \item{method}{ a character string giving the type of interval to be used. This must be one of '"percentile"', '"wald"' or '"boott"'.}
   \item{B}{number of resamples used to estimate the mean squared error with 1000 as the default.}
-  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with $2^14$ as the default. }
+  \item{gridsize}{ the number of points at which the kernel density estimator is to be evaluated with \eqn{2^{14}} as the default. }
 }
 \details{
   The method can be a vector of strings containing the possible choices.
@@ -29,12 +29,12 @@ mkle.ci(data, bw=2*sd(data), alpha=0.1, kernel=c("gaussian", "epanechnikov",
   A dataframe with the requested intervals.
 }
 \references{ 
-Jaki T., West R. W. (2007) Maximum kernel likelihood estimation. Submitted to \textit{Journal of Computational and Graphical Statistics}. 
+Jaki T., West R. W. (2008) Maximum kernel likelihood estimation. \emph{Journal of Computational and Graphical Statistics} Vol. 17(No 4), 976-993. 
 
 Davison, A. C. and Hinkley, D. V. (1997), Bootstrap Methods and their Applications, Cambridge Series in Statistical and Probabilistic Mathematics, Cambridge University Press.
 }
 \author{ Thomas Jaki }
-}
+
 \seealso{ \code{\link{mkle}} }
 \examples{
 data(state)

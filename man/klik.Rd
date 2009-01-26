@@ -2,14 +2,14 @@
 \alias{klik}
 \title{ Kernel log likelihood }
 \description{
-  The function computes the kernel log likelihood for a given $\theta$.
+  The function computes the kernel log likelihood for a given \eqn{\hat \theta }.
 }
 \usage{
 klik(delta , data, kde, grid, min)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{delta}{ the difference of the parameter $\theta$ for which the kernel log likelihood will be computed and the sample mean. }
+  \item{delta}{ the difference of the parameter theta for which the kernel log likelihood will be computed and the sample mean. }
   \item{data}{ the data for which the kernel log likelihood will be computed. }
   \item{kde}{ an object of the class "density". }
   \item{grid}{ the stepsize between the x-values in kde. }
@@ -21,8 +21,8 @@ klik(delta , data, kde, grid, min)
 \value{
   The log likelihood based on the shifted kernel density estimator.
 }
-\references{ Jaki T., West R. W. (2007) Maximum kernel likelihood estimation. Submitted to \textit{Journal of Computational
-and Graphical Statistics}. }
+\references{ Jaki T., West R. W. (2008) Maximum kernel likelihood estimation. \emph{Journal of Computational
+and Graphical Statistics} Vol. 17(No 4), 976-993. }
 \author{ Thomas Jaki }
 \seealso{ \code{\link{mkle}} }
 \examples{
