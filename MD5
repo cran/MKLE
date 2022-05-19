@@ -1,5 +1,5 @@
-4488994607914854fd5dd319ba750b26 *DESCRIPTION
-9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
+0b81f925122f757e3e238a3fd1dbff62 *DESCRIPTION
+5d91de63ab1bf5dc00a087bd2925ecc7 *NAMESPACE
 c3d3c567e84b9440c804a103eb115e2e *R/klik.R
 627d3ad8b6b232da68fd562afc95f2ba *R/mkle.R
 3ed97126a412daa0521467bc84e15fc7 *R/mkle.ci.R
@@ -9,5 +9,5 @@ dd1293c3bcd3c098824e5667c577d7c6 *data/state.rda
 a524c3e13311926245d0e421bead022b *man/klik.Rd
 48a1be462b94c03ed29921c13b92a89e *man/mkle.Rd
 875448a00044358815087a57c2ef22b8 *man/mkle.ci.Rd
-8a5b2ab075be6745a3bfbd5681f83746 *man/opt.bw.Rd
+836fb939fd9e2de15e3ece53612e237d *man/opt.bw.Rd
 51f3f977601c72a26987b98153dcfed9 *man/state.Rd

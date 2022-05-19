@@ -33,6 +33,6 @@ Davison, A. C. and Hinkley, D. V. (1997), Bootstrap Methods and their Applicatio
 \seealso{ \code{\link{mkle}} }
 \examples{
 data(state)
-opt.bw(state$CRIME,B=100)
+opt.bw(state$CRIME,B=10)
 }
 \keyword{ nonparametric }
