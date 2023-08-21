@@ -12,8 +12,8 @@ Computes the maximum kernel likelihood estimator using fast fourier transforms.
 \tabular{ll}{
 Package: \tab MKLE\cr
 Type: \tab Package\cr
-Version: \tab 0.05\cr
-Date: \tab 2008-05-02\cr
+Version: \tab 1.01\cr
+Date: \tab 2023-08-21\cr
 License: \tab GPL \cr
 }
 The maximum kernel likelihood estimator is defined to be the value \eqn{\hat \theta} that maximizes the estimated kernel likelihood based on the general location model,
